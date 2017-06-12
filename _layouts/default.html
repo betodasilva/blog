@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {% include head.html %}
+
+  <body>
+    <div class="row">
+      {% include sidebar.html %}
+      <main class="page-content col-xs-12 col-sm-8 col-md-9" aria-label="Content">
+        {% include header.html %}
+          {{ content }}
+      </main>
+
+    </div>
+  </body>
+
+</html>
