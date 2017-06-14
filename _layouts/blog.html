@@ -1,21 +1,24 @@
 ---
 layout: default
 ---
-<div class="wrapper">
-	<ul class="post-list">
-		{% for post in site.posts %}
-		<li class="post-item">
-			<h2 class="post-item__title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
-			<p class="post-item__exc">{{ post.excerpt | remove: '<p>' | remove: '</p>' }}</p>
-			<span class="post-item__date font_small">Publicado em
-				<time datetime="{{ post.date | date_to_xmlschema }}">
-				 {{ post.date | date_to_string }}
-				 </time>
-			 </span>
-			 <a href="{{ post.url }}" class="post-item__btn">Ler Artigo 
-			 	<i class="fontawesome-double-angle-right"></i> 
-			 </a>
-		</li>
-		{% endfor %}
-	</ul>
-</div>
+{% include sidebar.html %}
+<main class="page-content col-xs-12 col-sm-8 col-md-9" aria-label="Content">
+	<div class="wrapper">
+		<ul class="post-list">
+			{% for post in site.posts %}
+			<li class="post-item">
+				<h2 class="post-item__title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+				<p class="post-item__exc">{{ post.excerpt | remove: '<p>' | remove: '</p>' }}</p>
+				<span class="post-item__date font_small">Publicado em
+					<time datetime="{{ post.date | date_to_xmlschema }}">
+						{{ post.date | date_to_string }}
+					</time>
+				</span>
+				<a href="{{ post.url }}" class="post-item__btn">Ler Artigo 
+					<i class="fontawesome-double-angle-right"></i> 
+				</a>
+			</li>
+			{% endfor %}
+		</ul>
+	</div>
+</main>
