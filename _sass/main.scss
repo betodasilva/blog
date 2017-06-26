@@ -115,6 +115,13 @@
 		vertical-align: middle
 	}
 }
+@media screen and (max-width: 425px) {
+	.post-item__btn { display: block; text-align: center; float: none;}
+	.post-item__info { text-align: center; }
+}
+@media screen and (max-width: 768px) {
+	.post-item__title, .post-item__exc p { text-align: center; }
+}
 
 /* ARTICLE */
 
