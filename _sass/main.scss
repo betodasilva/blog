@@ -3,11 +3,11 @@
 		'flexboxgrid.min.css', 
 		'syntax-highlighting';
 
-@import url(http://weloveiconfonts.com/api/?family=fontawesome);
+@import url(http://weloveiconfonts.com/api/?family=brandico);
 
-/* fontawesome */
-[class*="fontawesome-"]:before {
-  font-family: 'FontAwesome', sans-serif;
+/* brandico */
+[class*="brandico-"]:before {
+  font-family: 'brandico', sans-serif;
 }
 
 
@@ -19,7 +19,9 @@
 
 .sbar {
 	padding: 3em 1em;
-	background-color: #F6F6F6;
+	background: linear-gradient(to bottom, #4776E6 0%, #9055EC 100%);
+	color: $text-color-white;
+	display: flex;
 }
 
 .sbar__author {
@@ -44,12 +46,27 @@
 	justify-content: space-around;
 	width: 80%;
 	margin: 2em auto 0;
-
+	> a { 
+		display: inline-block;
+		width: 24px; height: 24px; line-height: 24px;
+		border-radius: 100%;
+		text-decoration: none;
+		color: $text-color-white;
+		transition: background-color .3s ease;
+		&.github:hover {background-color: $github; }
+		&.twitter:hover {background-color: $twitter; }
+		&.instagram:hover {background-color: $instagram; }
+		//&.facebook:hover {background-color: $facebook; }
+		@media screen and (min-width: 1024px) {
+			width: 32px; height: 32px; line-height: 32px;
+		}
+	}
 }
 
 /* POST LIST */
 .wrapper {
-	padding: 0 2em;
+	max-width: 860px;
+	margin: 0 auto;
 }
 
 .post-list {
@@ -65,20 +82,38 @@
 
 .post-item__exc {
 	margin-bottom: .5em;
+	p > img {margin-bottom: 1rem; }
+}
+
+.post-item__date {
+	color: #8B8B8B;
 }
 
 .post-item__btn {
-	display: block;
-	max-width: 120px;
-	margin-top: .5em;
-	border: 1px solid $text-color;
-	border-radius: 5px;
-	color: $text-color;
-	line-height: 2em;
-	font-size: 0.8888em;
+	font-size: 0.833em;
+	color: #8B8B8B;
 	text-decoration: none;
-	text-align: center;
+	text-align: right;
+	float: right;
+}
 
+.post-item__category {
+	color: #8B8B8B;
+	font-weight: 700;
+
+	.category-sep {
+		color: inherit;
+		display: inline-block;
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+
+	.category-dot {
+		color: #4776E6;
+		font-size: 28px;
+		line-height: 22px;
+		vertical-align: middle
+	}
 }
 
 /* ARTICLE */
