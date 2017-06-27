@@ -3,19 +3,27 @@ layout: default
 ---
 {% assign author = site.data.authors[page.author] %}
 
-<div class="post-wrapper">
-  <article class="post col-xs-12" itemscope itemtype="http://schema.org/BlogPosting">
+<div class="post-wrapper col-xs-12">
+  {% include blog-nav.html %}
+  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
     <header class="post-header">
-      <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
+      <div class="post-info">
+        {% if author %}
+          <div class="post-author">
+            <img src="{{author.pic}}" alt="Autor" class="post-author__img" width="24" height="24">
+            <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ author.name }}</span></span>
+          </div>
+        {% endif %}
       <p class="post-meta">
         <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
           {% assign date_format = site.date_format | default: "%b %-d, %Y" %}
           {{ page.date | date: date_format }}
         </time>
-        {% if author %}
-          • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ author.name }}</span></span>
-        {% endif %}</p>
+      </p>
+      </div>
+      <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
+     
     </header>
 
     <div class="post-content" itemprop="articleBody">
