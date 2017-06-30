@@ -134,8 +134,11 @@
 /* ARTICLE */
 
 .post-wrapper {
-	max-width: 829px;
-	margin: 0 auto;
+	@media screen and (min-width: 1024px) {
+		max-width: 829px;
+		margin: 0 auto;
+	}
+	
 }
 
 .post-header {
@@ -146,28 +149,52 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
-	max-width: 60%;
-	margin: 1.1111em auto;
+	max-width: 80%;
+	
+	margin: 1.1111em auto 2.2222em;
 
 	&:before, &:after {
 		content: "";
-		position: absolute;
-		width: 23%;
+		width: 10%;
 		height: 1px;
+		position: absolute;
 		background-color: #ccc;
 	}
 
 	&:before {
-		right: 77%;
+		right: 90%;
 	}
 
 	&:after {
-		left: 77%;
+		left: 90%;
 	}
 
+	
 
 	.post-meta {
-		margin-bottom: 0;
+		margin-bottom: .2em;
+	}
+
+	@media screen and (max-width: 325px) {
+		max-width: 100%;
+		&:before, &:after {
+			display: none;
+		}
+	}
+	@media screen and (min-width: 768px) {
+		max-width: 60%;
+		&:before, &:after {
+			width: 23%;
+		}
+
+		&:before {
+			right: 77%;
+		}
+
+		&:after {
+			left: 77%;
+		}
+
 	}
 }
 
