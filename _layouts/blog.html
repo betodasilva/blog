@@ -22,11 +22,12 @@ layout: default
 							<span class="category-dot">&bullet;</span> {{post.category}}
 						</span>
 					{% endunless %}
+					<a href="{{ post.url }}" class="post-item__btn"><em>Continuar leitura 
+						<i class="fontawesome-double-angle-right"></i> 
+						</em>
+					</a>
 				</div>
-				<a href="{{ post.url }}" class="post-item__btn"><em>Continuar leitura 
-					<i class="fontawesome-double-angle-right"></i> 
-					</em>
-				</a>
+				
 			</li>
 			{% endfor %}
 		</ul>
