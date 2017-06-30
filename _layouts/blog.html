@@ -7,7 +7,7 @@ layout: default
 		<ul class="post-list">
 			{% for post in site.posts %}
 			<li class="post-item">
-				<h2 class="post-item__title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+				<h2 class="post-item__title"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
 				<div class="post-item__exc">{{ post.excerpt }}</div>
 				<div class="post-item__info">
 					<span class="post-item__date font_small"><em>Postado 
