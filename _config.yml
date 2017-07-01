@@ -23,7 +23,8 @@ baseurl: "/blog" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 permalink: /:categories/:title/
 twitter_username: betodslv
-github_username:  betodslv
+github_username:  betodasilva
+instagram_username: betodslv
 
 # Build settings
 markdown: kramdown
