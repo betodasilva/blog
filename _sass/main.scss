@@ -1,14 +1,10 @@
 @charset "utf-8";
 @import 'base',
-		'flexboxgrid.min.css', 
+		'flexboxgrid.min.css',
+		'fontello.css',
 		'syntax-highlighting';
 
-@import url(http://weloveiconfonts.com/api/?family=brandico);
-
-/* brandico */
-[class*="brandico-"]:before {
-  font-family: 'brandico', sans-serif;
-}
+// @import url(http://weloveiconfonts.com/api/?family=brandico);
 
 
 /* SIDEBAR */
@@ -29,6 +25,7 @@
 	flex-direction: column;
 	align-items: center;
 }
+.author-name, .author-career { font-weight: 700; }
 
 .author-desc {
 	&:first-of-type { margin-top: 1em; }
@@ -48,7 +45,7 @@
 	margin: 2em auto 0;
 	> a { 
 		display: inline-block;
-		width: 24px; height: 24px; line-height: 24px;
+		width: 32px; height: 32px; line-height: 32px;
 		border-radius: 100%;
 		text-decoration: none;
 		color: $text-color-white;
@@ -58,7 +55,7 @@
 		&.instagram:hover {background-color: $instagram; }
 		//&.facebook:hover {background-color: $facebook; }
 		@media screen and (min-width: 1024px) {
-			width: 32px; height: 32px; line-height: 32px;
+			width: 42px; height: 42px; line-height: 42px;
 		}
 	}
 }
