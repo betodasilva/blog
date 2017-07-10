@@ -1,9 +1,12 @@
 ---
+title: How I Improved My Digital Presence In One Easy Lesson
+date: 2017-06-10 00:00:00 Z
+categories:
+- front-end
 layout: post
-title:  "How I Improved My Digital Presence In One Easy Lesson"
 author: beto
-category: front-end
 ---
+
 ![Imagem destacada](https://unsplash.it/863/300)
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
